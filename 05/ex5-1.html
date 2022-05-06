@@ -22,7 +22,11 @@
             html = html + '<ul>';
             for (var i = 0; i < objects.length; i++) {
                 var object = objects[i];
+                var name = name[i];
+                var time = time[i];
                 html = html + '<li>' + object.tweet + '</li>';
+                html = html + '<li>' + object.name + '</li>';
+                html = html + '<li>' + object.time + '</li>';
             }
             html = html + '</ul>';
             document.getElementById('result').innerHTML = html;
