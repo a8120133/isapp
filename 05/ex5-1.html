@@ -16,7 +16,7 @@
 
         async function doSelect() {
             var word = document.getElementById('tf2').value;
-            var sql = `select * from Tweets where tweet like '%word%';`
+            var sql = `select * from Tweets where tweet like '%${word}%';`
             var objects = await osql.connect(sql);
             console.log(objects);
             var html = '';
