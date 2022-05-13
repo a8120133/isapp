@@ -3,20 +3,30 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" conten
+t="text/html; charset=UTF-8">
 
     <script type="text/javascript" src="../jquery.min.js"></script>
     <script type="text/javascript" src="../settings.js"></script>
     <script type="text/javascript" src="../osql.js"></script>
 
     <script>
+        $().ready(function () {
+            init();
+        });
+
+        function init() {
+            var name = sessionStorage.getItem('name');
+            document.getElementById('name').innerHTML = name ;
+        }
+
     </script>
 
 </head>
 
 <body>
     <h1>ユーザトップ</h1>
-    <p id="welcome">ようこそxxさん</p>
+    <p id="welcome">ようこそ<input id="name" value="名前" type="textfield">さん</p>
     <hr>
 
 </body>
