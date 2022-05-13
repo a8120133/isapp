@@ -10,10 +10,14 @@
     <script type="text/javascript" src="../osql.js"></script>
 
     <script>
+        $().ready(function () {
+            doTable();
+        });
+
         async function doTable() {
             var word = document.getElementById('tf2').value;
-            var sql = `select * from Tweets where tweet like '%${word}%';`
-            var objects = await osql.connect(sql);
+            var sql_1 = `select * from Tweets ;`
+            var objects = await osql.connect(sql_1);
             var html = '';
             html = html + '<table border="1">';
             for (var i = 0; i < objects.length; i++) {
@@ -59,7 +63,7 @@
     tweet:<input id="tf2" type="textfield">
     <button onclick="button1Pressed()">tweet</button>
     <br>
-    <p id="result"></p>
+    <p id="result"></p> 
 </body>
 
 </html>
