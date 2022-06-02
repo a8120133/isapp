@@ -21,6 +21,7 @@ t="text/html; charset=UTF-8">
             var userid = sessionStorage.getItem('userid');
             console.log(userid)
             document.getElementById('update').href = `update.html?userid=${userid}`
+            document.getElementById('twitter').href = `twitter.html?name=${userid}`
         }
 
     </script>
@@ -32,6 +33,7 @@ t="text/html; charset=UTF-8">
     <p id="welcome"></p>
     <hr>
     <p style="text-align: right"><a href id = 'update'>ユーザー情報変更</a></p>
+    <p style="text-align: right"><a href id = 'twitter'>Twitter</a></p>
     
 
 </body>
