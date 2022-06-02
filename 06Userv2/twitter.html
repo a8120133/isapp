@@ -43,7 +43,6 @@
             var user = objects[0];
             var userid = sessionStorage.getItem('userid');
             document.getElementById('tf1').value = userid;
-            console.log(user.id);
         }
 
 
@@ -58,7 +57,7 @@
             var name = document.getElementById('tf1').value;
             var tweet = document.getElementById('tf2').value;
 
-            var sql = `insert into Tweets (tweet, time) values("${tweet}", now());`;
+            var sql = `insert into Tweets (name, tweet, time) values("${userid}","${tweet}", now());`;
             var objects = await osql.connect(sql);
             console.log(objects);
 
