@@ -32,11 +32,12 @@
             document.getElementById('result').innerHTML = html;
         }
 
-        function buttonPressed(){
+        async function buttonPressed(){
             //var ID = sessionStorage.getItem('userid');
             var userid = document.getElementById('tf1').value;
             console.log(userid);
-            var sql =`delete from Users where id = ”${userid}"`;
+            var sql =`delete from Users where id = "${userid}"`;
+            await osql.connect(sql);
         }
     </script>
 
